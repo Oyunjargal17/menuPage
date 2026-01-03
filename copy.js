@@ -221,24 +221,33 @@
 // 👉 Тоонуудыг 2-оор үржүүл
 
 // const nums = [1, 2, 3, 4];
+// const nums = [1, 2, 3, 4];
+// const doubled = nums.map((num) => num * 2);
+// console.log(doubled);
 
 // 2️⃣ map
 
 // 👉 Нэрсийг бүгдийг том үсэг болго
 
 // const names = ["bat", "saraa", "bold"];
+// const max = names.map((ner) => ner.toUpperCase());
+// console.log(max);
 
 // 3️⃣ filter
 
 // 👉 5-аас их тоонуудыг шүү
 
 // const numbers = [2, 6, 1, 8, 4];
+// const max = numbers.filter((num) => num > 5);
+// console.log(max);
 
 // 4️⃣ filter
 
 // 👉 "a" үсэг орсон үгсийг үлдээ
 
 // const words = ["cat", "dog", "ant", "cow"];
+// const baina = words.filter((word) => word.includes("a"));
+// console.log(baina);
 
 // 5️⃣ filter
 
@@ -248,18 +257,24 @@
 //   { name: "Pancake", category: "breakfast" },
 //   { name: "Burger", category: "lunch" },
 // ];
+// const baina = menu.filter((item) => item.category === "breakfast");
+// console.log(baina);
 
 // 6️⃣ reduce
 
 // 👉 Тоонуудын нийлбэрийг ол
 
 // const nums = [5, 3, 2];
+// const sum = nums.reduce((sum, n) => sum + n, 0);
+// console.log(sum);
 
 // 7️⃣ reduce
 
 // 👉 Нийт үгийн урт ол
 
 // const words = ["hi", "hello", "bye"];
+// const urt = words.reduce((urt, word) => urt + word.length, 0);
+// console.log(urt);
 
 // 8️⃣ reduce
 
@@ -269,18 +284,26 @@
 //   { name: "Pen", price: 1000 },
 //   { name: "Book", price: 3000 },
 // ];
+// const sum = items.reduce((sum, item) => sum + item.price, 0);
+// console.log(sum);
 
 // 9️⃣ map + filter
 
 // 👉 10-аас их тоонуудыг 2-оор үржүүл
 
-// const nums = [4, 10, 15, 2];
+// const nums = [4, 10, 15, 2, 11];
+// const max = nums.filter((num) => num >= 10);
+// const doubled = max.map((num) => num * 2);
+// console.log(doubled);
 
 // 🔟 filter + reduce
 
 // 👉 5-аас их тоонуудын нийлбэр
 
 // const nums = [1, 6, 3, 8];
+// const max = nums.filter((num) => num > 5);
+// const sum = max.reduce((total, num) => total + num, 0);
+// console.log(sum);
 
 // ✅ ХАРИУУД
 // 1️⃣
@@ -352,3 +375,94 @@
 // for (let i = 0; i < numbers.length; i++) {
 //   numbers[i] = numbers[i] + 10;
 // }
+
+// Супер 🔥
+// Доор map / filter / reduce холимог 8 бодлого + бодолтын логик + хариутай өгье.
+// (Анхан → дунд шат руу орох яг тохиромжтой 💪)
+
+// 📝 БОДЛОГУУД
+// 1️⃣ (filter + map)
+
+// 👉 10-аас их тоонуудыг 2-оор үржүүл
+
+// const nums = [5, 12, 3, 20];
+// const max = nums.filter((num) => num > 10);
+// const doubled = max.map((num) => num * 2);
+// console.log(doubled);
+
+// 2️⃣ (map + filter)
+
+// 👉 Үгсийг том үсэг болгоод, урт нь 5-аас ихийг үлдээ
+
+// const words = ["apple", "cat", "banana", "dog"];
+// const long = words.map((word) => word.toUpperCase());
+// const max = long.filter((word) => word.length > 5);
+// console.log(max);
+
+// 3️⃣ (filter + reduce)
+
+// 👉 10000-аас их үнэтэй бараануудын нийт үнэ
+
+// const items = [
+//   { name: "Phone", price: 8000 },
+//   { name: "Laptop", price: 25000 },
+//   { name: "Tablet", price: 15000 },
+// ];
+// const max = items.filter((item) => item.price > 10000);
+// const sum = max.reduce((accum, item) => (accum += item.price), 0);
+// console.log(sum);
+
+// 4️⃣ (map + reduce)
+
+// 👉 Хоолны нэрсийн нийт үсгийн тоо
+
+// const foods = ["burger", "pizza", "salad"];
+// const ners = foods.map((food) => food.length);
+// const sum = ners.reduce((accum, food) => (accum += food), 0);
+// console.log(sum);
+
+// 5️⃣ (filter + map + reduce)
+
+// 👉 breakfast ангиллын хоолнуудын нийт үнэ
+
+// const menu = [
+//   { name: "Pancake", category: "breakfast", price: 6000 },
+//   { name: "Burger", category: "lunch", price: 12000 },
+//   { name: "Omelet", category: "breakfast", price: 5000 },
+// ];
+// const hool = menu.filter((item) => item.category === "breakfast");
+// const une = hool.map((item) => item.price);
+// const sum = une.reduce((accum, item) => (accum += item), 0);
+// console.log(sum);
+
+// 6️⃣ (map + filter)
+
+// 👉 Наснуудаас насанд хүрэгчдийн (≥18) нэрсийг ав
+
+// const people = [
+//   { name: "Bat", age: 16 },
+//   { name: "Saraa", age: 22 },
+//   { name: "Bold", age: 18 },
+// ];
+// const max = people.filter((item) => item.age >= 18);
+// const ners = max.map((item) => item.name);
+// console.log(ners);
+
+// 7️⃣ (filter + reduce)
+
+// 👉 5-аас их тоонуудын үржвэр
+
+// const nums = [2, 6, 3, 8];
+// const max = nums.filter((num) => num > 5);
+// const sum = max.reduce((accum, num) => (accum *= num), 1);
+// console.log(sum);
+
+// 8️⃣ ⭐ (filter + map + reduce)
+
+// 👉 "a" үсэг агуулсан үгсийн нийт урт
+
+// const words = ["cat", "dog", "ant", "cow"];
+// const a = words.filter((word) => word.includes("a"));
+// const ug = a.map((word) => word.length);
+// const niit = ug.reduce((accum, word) => (accum += word), 0);
+// console.log(niit);
